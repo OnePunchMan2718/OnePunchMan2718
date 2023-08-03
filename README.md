@@ -1,5 +1,5 @@
 <p align="center">
-    <a href='https://discord.com/users/767783141838159882'><img src="https://discord.c99.nl/widget/theme-4/767783141838159882.png" alt="top-langs"></a>
+    <a href='https://discord.com/users/767783141838159882'><img src="https://discord.c99.nl/widget/theme-3/767783141838159882.png" alt="top-langs"></a>
     <br />
     <a href="https://github.com/OnePunchMan2718">
         <img align="center" alt="Follow" src="https://img.shields.io/github/followers/OnePunchMan2718?style=flat&amp;logo=github&amp;label=Followers&amp;color=2D76BF">
