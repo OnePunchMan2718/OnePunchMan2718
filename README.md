@@ -25,6 +25,9 @@
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![HTML](https://img.shields.io/badge/html-orange?style=for-the-badge&logo=html&logoColor=white)
+![CSS](https://img.shields.io/badge/css-blue?style=for-the-badge&logo=css&logoColor=white)
+![TailWind](https://img.shields.io/badge/tailwind-0078d7?style=for-the-badge&logo=tailwind&logoColor=white)
 
 <p align="center">
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=OnePunchMan2718&show_icons=true&theme=dark&layout=compact" alt="git-status" class="center">
