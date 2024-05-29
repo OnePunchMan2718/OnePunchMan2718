@@ -1,0 +1,33 @@
+name: Generate Snake Animation
+
+on:
+  schedule: # execute every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Generate Snake Animation
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Generate the snake animation
+      - name: Generate Snake
+        uses: Platane/snk@v2.2.1
+        with:
+          github_user_name: OnePunchMan2718
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      # Upload the result to the repository
+      - name: Commit and Push
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: "github-actions[bot]"
+          author_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          message: "Generate snake animation"
+          add: "dist/github-contribution-grid-snake.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
