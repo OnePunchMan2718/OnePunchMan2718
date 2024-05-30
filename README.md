@@ -35,6 +35,7 @@
     <br />
 </p>
 
+<!-- snake animation -->
 ![GitHub Snake Animation](dist/github-contribution-grid-snake.svg)
 
 ### ♡ › How can I Support you?
