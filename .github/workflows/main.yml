@@ -23,6 +23,10 @@ jobs:
       - name: Generate Snake Animation
         run: |
           npm run generate-snake
+          if [ $? -ne 0 ]; then
+            echo "Error generating snake animation"
+            exit 1
+          fi
           # Assuming the snake animation generation script outputs to dist/github-contribution-grid-snake.svg
           sed -i '/<!-- snake animation -->/{n;d;}' README.md
           sed -i '/<!-- snake animation -->/a ![GitHub Snake Animation](dist/github-contribution-grid-snake.svg)' README.md
