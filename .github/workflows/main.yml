@@ -17,13 +17,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Generate Snake Animation
         run: |
           set -x  # Enable debug mode to see all commands
-          npm run generate-snake
+          # Assuming you have a generate-snake.sh or similar script to generate the snake animation
+          # Replace this with the actual command or script you use to generate the snake animation
+          ./generate-snake.sh
           if [ $? -ne 0 ]; then
             echo "Error generating snake animation"
             exit 1
