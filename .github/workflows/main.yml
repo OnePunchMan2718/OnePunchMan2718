@@ -1,42 +1,39 @@
 name: Generate Snake Animation
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"  # Runs daily at midnight
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
 
 jobs:
-  generate-snake:
+  build:
+    name: Generate Snake Animation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      # Checkout the repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      # Generate the snake animation
+      - name: Generate Snake
+        uses: Platane/snk@master
         with:
-          node-version: '20'
+          github_user_name: OnePunchMan2718
+          svg_out_path: dist/github-contribution-grid-snake.svg
 
-      - name: Generate Snake Animation
+      # Update README file
+      - name: Update README
         run: |
-          set -x  # Enable debug mode to see all commands
-          # Assuming you have a generate-snake.sh or similar script to generate the snake animation
-          # Replace this with the actual command or script you use to generate the snake animation
-          ./generate-snake.sh
-          if [ $? -ne 0 ]; then
-            echo "Error generating snake animation"
-            exit 1
-          fi
-          # Assuming the snake animation generation script outputs to dist/github-contribution-grid-snake.svg
-          sed -i '/<!-- snake animation -->/{n;d;}' README.md
-          sed -i '/<!-- snake animation -->/a ![GitHub Snake Animation](dist/github-contribution-grid-snake.svg)' README.md
+          echo "Updating README"
+          sed -i '/snake animation/!b;n;c\\![GitHub Snake Animation](dist/github-contribution-grid-snake.svg)' README.md
 
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md dist/github-contribution-grid-snake.svg
-          git commit -m "Update snake animation in README"
-          git push
+      # Commit and push the result to the repository
+      - name: Commit and Push
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "github-actions[bot]"
+          author_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          message: "Update snake animation in README"
+          add: "README.md,dist/github-contribution-grid-snake.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
