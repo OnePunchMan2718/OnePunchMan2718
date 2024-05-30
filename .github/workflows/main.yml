@@ -21,13 +21,19 @@ jobs:
           github_user_name: OnePunchMan2718
           svg_out_path: dist/github-contribution-grid-snake.svg
 
+      # Update README file
+      - name: Update README
+        run: |
+          echo "Updating README"
+          sed -i '/snake animation/!b;n;c\\![GitHub Snake Animation](dist/github-contribution-grid-snake.svg)' README.md
+
       # Commit and push the result to the repository
       - name: Commit and Push
         uses: EndBug/add-and-commit@v9
         with:
           author_name: "github-actions[bot]"
           author_email: "41898282+github-actions[bot]@users.noreply.github.com"
-          message: "Generate snake animation"
-          add: "dist/github-contribution-grid-snake.svg"
+          message: "Update snake animation in README"
+          add: "README.md,dist/github-contribution-grid-snake.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
