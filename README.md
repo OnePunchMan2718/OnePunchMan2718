@@ -37,7 +37,13 @@
     <br />
 </p>
 
-![snake gif](https://github.com/OnePunchMan/OnePunchMan2718/blob/output/github-contribution-grid-snake-dark.svg)
+<div align="center">
+  <h2>🐍 My Contributions 🐍</h2>
+  <br>
+  <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/salesp07/salesp07/output/github-contribution-grid-snake.svg" />
+  
+  <br/><br/><br/>
+</div>
 
 ### ♡ › How can I Support you?
 <a href="https://www.buymeacoffee.com/OnePunchMan_2718"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=OnePunchMan_2718&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
