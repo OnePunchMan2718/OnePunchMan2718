@@ -22,6 +22,7 @@ jobs:
 
       - name: Generate Snake Animation
         run: |
+          set -x  # Enable debug mode to see all commands
           npm run generate-snake
           if [ $? -ne 0 ]; then
             echo "Error generating snake animation"
