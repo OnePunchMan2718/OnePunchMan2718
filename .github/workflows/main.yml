@@ -1,7 +1,7 @@
 name: Generate Snake Animation
 
 on:
-  schedule: # execute every 12 hours
+  schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
@@ -16,10 +16,10 @@ jobs:
 
       # Generate the snake animation
       - name: Generate Snake
-        uses: Platane/snk@v2
+        uses: Platane/snk@v2.0.1
         with:
           github_user_name: OnePunchMan2718
-          outputs: dist/github-contribution-grid-snake.svg
+          svg_out_path: dist/github-contribution-grid-snake.svg
 
       # Commit and push the result to the repository
       - name: Commit and Push
